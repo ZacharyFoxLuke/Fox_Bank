@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/responsive.css">
         <link rel="stylesheet" href="styles/flickity.min.css" media="screen">
+        <link rel="stylesheet" href="styles/scrollbutton.css">
         <script src="https://kit.fontawesome.com/8821130486.js" crossorigin="anonymous"></script>
+        <script src="js/jquery.js"></script>
 
     </head>
 
@@ -26,11 +28,31 @@
         </div>
 
         <!-- Main Image Carousel -->
-        <div class="main-carousel">
+        <a id="#homeSection1" href="#"></a>
+        <div class="main-carousel homeSection1" data-flickity='{ "autoPlay": 6000 }'>
             <div class="carousel-cell">...</div>
             <div class="carousel-cell">...</div>
             <div class="carousel-cell">...</div>
-            ...
+        </div>
+        <section class="section05 demo">
+            <a href="#homeSection2"><span></span>Scroll</a>
+        </section>
+
+        <a id="#homeSection2" href="#"></a>
+        <div class="main-carousel homeSection2" data-flickity='{ "autoPlay": 6000 }'>
+            <div class="carousel-cell">...</div>
+            <div class="carousel-cell">...</div>
+            <div class="carousel-cell">...</div>
+        </div>
+        <section class="section05 demo">
+            <a href="#homeSection3"><span></span>Scroll</a>
+        </section>
+
+        <a id="#homeSection3" href="#"></a>
+        <div class="main-carousel homeSection3" data-flickity='{ "autoPlay": 6000 }'>
+            <div class="carousel-cell">...</div>
+            <div class="carousel-cell">...</div>
+            <div class="carousel-cell">...</div>
         </div>
         
         <script src="js/app.js" async defer></script>
