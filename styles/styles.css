@@ -37,9 +37,60 @@ html {
     float: right !important;
 }
 
+.scrollDown {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.scrollDown p {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.fa-chevron-down {
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    color:  #fff;
+    ;
+}
+
+.scrollDown:hover {
+    transition: .2s ease;
+}
+
 /* ---------------------------------------- ANIMATIONS ---------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
 
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    5% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-25%);
+    }
+    15% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.fa-chevron-down {
+    animation: bounce 10s infinite;
+}
 
 
 
