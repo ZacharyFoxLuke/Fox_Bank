@@ -12,16 +12,23 @@ function myFunction() {
 // ---------------------------------------- FLICKITY ---------------------------------------- //
 // ------------------------------------------------------------------------------------------ //
 
-$('.main-carousel').flickity({
+var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity(elem, {
     // options
     cellAlign: 'left',
     contain: true
-}); 
+});
+
+// element argument can be a selector string
+//   for an individual element
+var flkty = new Flickity('.main-carousel', {
+    // options
+});
  
 // ---------------------------------------- ANIMATIONS ---------------------------------------- //
 // -------------------------------------------------------------------------------------------- //
 
-$(function () {
+(function () {
     $('a[href*=#]').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
