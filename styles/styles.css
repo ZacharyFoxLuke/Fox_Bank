@@ -46,6 +46,10 @@ html {
     
 }
 
+.scrollDown a {
+    text-decoration: none;
+}
+
 .scrollDown p {
     margin: 0;
     font-family: 'Nunito', sans-serif;
