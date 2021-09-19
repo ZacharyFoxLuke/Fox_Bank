@@ -1,36 +1,144 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Fox Bank</title>
+
+        <!-- Meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Fox Bank</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Links/Styles -->
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/responsive.css">
         <link rel="stylesheet" href="styles/flickity.min.css" media="screen">
-        <link rel="stylesheet" href="styles/scrollbutton.css">
-        <script src="https://kit.fontawesome.com/8821130486.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <script src="js/jquery.js"></script>
+        
+        <!-- Javascript -->
+        <script src="https://kit.fontawesome.com/8821130486.js" crossorigin="anonymous"></script>
+        <script src="js/jquery.js" defer></script>
+        <script src="js/app.js" async defer></script>
+        <script src="js/flickity.min.js" defer></script>
 
     </head>
 
     <body>
-        <div class="topnav" id="myTopnav top">
-            <a href="#home" class="active">Home</a>
-            <a class="rightMenuItems" href="#news">News</a>
-            <a class="rightMenuItems" href="#contact">Contact</a>
-            <a class="rightMenuItems" href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fas fa-bars"></i>
-            </a>
+        <!--------------------- DESKTOP NAVBAR -->
+        <!--------------------------------------->
+        <div class="desktop-navbar">
+            <div>
+                <a href="#">
+                    <h1>Fox Bank</h1>
+                </a>
+            </div>
+            <div class="dropdown" data-dropdown>
+                <button class="link" data-dropdown-button>About</button>
+                <div class="dropdown-menu information-grid">
+                    <div>
+                        <div class="dropdown-heading">Meet Our Team</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Staff</a>
+                            <a href="#" class="link">Board of Directors</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Our History</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Overview</a>
+                            <a href="#" class="link">Future</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Blog</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Latest Posts</a>
+                            <a href="#" class="link">In The Community</a>
+                            <a href="#" class="link">Security & Fraud Prevention</a>
+                            <a href="#" class="link">National & International Money</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Contact Us</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Support Center</a>
+                            <a href="#" class="link">Phone & Mailing Information</a>
+                            <a href="#" class="link">Social Media</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown" data-dropdown>
+                <button class="link" data-dropdown-button>Products</button>
+                <div class="dropdown-menu information-grid">
+                    <div>
+                        <div class="dropdown-heading">Checking</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Basic Checking</a>
+                            <a href="#" class="link">Teens Checking</a>
+                            <a href="#" class="link">Prime Checking</a>
+                            <a href="#" class="link">Elite Checking</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Savings</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Basic Savings</a>
+                            <a href="#" class="link">Teens Savings</a>
+                            <a href="#" class="link">Prime Savings</a>
+                            <a href="#" class="link">Elite Savings</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Borrow</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Personal Loans</a>
+                            <a href="#" class="link">Auto Loans</a>
+                            <a href="#" class="link">Credit Cards</a>
+                            <a href="#" class="link">Mortgage</a>
+                            <a href="#" class="link">Shark Loans</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Retirement</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">Traditional IRA</a>
+                            <a href="#" class="link">Roth IRA</a>
+                            <a href="#" class="link">Self Employment IRA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#"><button>Login</button></a>
         </div>
 
-        <!-- Main Image Carousel -->
+
+        <!---------------------- MOBILE NAVBAR -->
+        <!--------------------------------------->
+        <nav class="mobile-navbar">
+            <div class="mobile-brand-title">Fox Bank</div>
+            <i class="fa-solid fa-bars"></i>
+            <div class="mobile-navbar-links">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+        <!------------------ FLICKITY CAROUSEL -->
+        <!--------------------------------------->
         <div id="homeSection1">
             <div class="main-carousel homeSection1" data-flickity='{ "autoPlay": 6000 }'>
                 <div class="carousel-cell">...</div>
@@ -45,7 +153,7 @@
             </div>
         </div>
         
-        <div id="homeSection2">
+        <div id="homeSection2" style="position: relative;">
             <div class="main-carousel homeSection2" data-flickity='{ "autoPlay": 6000 }'>
                 <div class="carousel-cell">...</div>
                 <div class="carousel-cell">...</div>
@@ -59,22 +167,19 @@
             </div>
         </div>
 
-        <div id="homeSection3">
+        <div id="homeSection3" style="position: relative;">
             <div class="main-carousel homeSection3" data-flickity='{ "autoPlay": 6000 }'>
                 <div class="carousel-cell">...</div>
                 <div class="carousel-cell">...</div>
                 <div class="carousel-cell">...</div>
             </div>
             <div class="scrollDown">
-                <a class="nextSection" href="#homeSection3">
-                    <i id="scrollDownArrow" class="fas fa-chevron-down"></i>
-                    <p>Scroll</p>
+                <a class="nextSection" href="#">
+                    <i id="scrollDownArrow" class="fas fa-chevron-up"></i>
+                    <p>Back to Top</p>
                 </a>
             </div>
         </div>
         
-        
-        <script src="js/app.js" async defer></script>
-        <script src="js/flickity.min.js"></script>
     </body>
 </html>

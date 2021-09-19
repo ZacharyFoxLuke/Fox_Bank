@@ -11,19 +11,152 @@
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
-    .topnav.responsive {
+    /* ------------------------------- MOBILE NAVBAR */
+    .desktop-navbar {
+        display: none;
+    }
+    
+    .mobile-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: #fff
+    }
+
+    .mobile-brand-title {
+        font-size: 1.5rem;
+        margin: .5rem;
+    }
+
+    .mobile-navbar-links ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .mobile-navbar-links li {
+        list-style: none;
+    }
+
+    .mobile-navbar-links li a {
+        color: #fff;
+        padding: 1rem;
+        display: block;
+    }
+
+    .mobile-navbar-links li:hover {
+        background-color: #555;
+    }
+
+    .mobile-navbar .fa-bars {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        top: .75rem;
+        right: 1rem;
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+    }
+
+    .mobile-navbar .fa-bars {
+        display: flex;
+    }
+
+    .mobile-navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .mobile-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mobile-navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .mobile-navbar-links li {
+        text-align: center;
+    }
+
+    .mobile-navbar-links.active {
+        display: flex;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 601px) {
+    /* ------------------------------- DESKTOP NAVBAR */
+    .mobile-navbar {
+        display: none;
+    }
+    
+    .desktop-navbar {
+        background-color: #f3f3f3;
+        display: flex;
+        align-items: baseline;
+        padding: .5rem;
+        gap: 1rem;
+    }
+
+    .link {
+        background: none;
+        border: none;
+        text-decoration: none;
+        color: #777;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .dropdown.active+.link,
+    .link:hover {
+        color: #000;
+    }
+
+    .dropdown {
         position: relative;
     }
 
-    .topnav.responsive a.icon {
+    .dropdown-menu {
         position: absolute;
-        right: 0;
-        top: 0;
+        left: 0;
+        top: calc(100% + .25rem);
+        background-color: #fff;
+        padding: .75rem;
+        border-radius: .25rem;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 150ms ease, transform 150ms ease;
+        transform: translateY(-10px);
     }
 
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
+    .dropdown.active>.link+.dropdown-menu {
+        opacity: 1;
+        transform: translateY(0px);
+        pointer-events: auto;
+    }
+
+    .information-grid {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 2rem;
+    }
+
+    .dropdown-links {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
     }
 }
