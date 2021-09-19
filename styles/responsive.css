@@ -6,10 +6,11 @@
     
     .mobile-navbar {
         display: flex;
+        overflow: hidden;
         justify-content: space-between;
         align-items: center;
         background-color: #333;
-        color: #fff
+        color: #fff;
     }
 
     .mobile-brand-title {
@@ -89,6 +90,7 @@
     
     .desktop-navbar {
         background-color: #f3f3f3;
+        overflow: hidden;
         display: flex;
         align-items: baseline;
         padding: .5rem;

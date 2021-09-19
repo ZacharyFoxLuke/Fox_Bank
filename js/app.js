@@ -2,6 +2,28 @@
 // ------------------------------------------------------------------------------------------- //
 
 
+// ---------------------------------------- GLOBAL VARIABLES
+const mobileNavbar = document.getElementsByClassName("mobile-navbar");
+const desktopNavbar = document.getElementsByClassName("desktop-navbar");
+const stickyDesktop = desktopNavbar.offsetTop;
+const stickyMobile = mobileNavbar.offsetTop;
+
+window.onscroll = function () {
+    stickyNav()
+};
+
+function stickyNav() {
+    if (window.pageYOffset >= stickyDesktop || window.pageYOffset >= stickyMobile) {
+        desktopNavbar.classList.add("sticky");
+        mobileNavbar.classList.add("sticky");
+    }
+    // else {
+    //     desktopNavbar.classList.remove("sticky");
+    //     mobileNavbar.classList.remove("sticky");
+    // }
+}
+
+
 // ---------------------------------------- DESKTOP NAVBAR
 document.addEventListener('click', e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]")
