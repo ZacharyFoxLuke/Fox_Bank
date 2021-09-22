@@ -3,8 +3,8 @@
 
 
 // ---------------------------------------- GLOBAL VARIABLES
-const mobileNavbar = document.getElementsByClassName("mobile-navbar");
-const desktopNavbar = document.getElementsByClassName("desktop-navbar");
+const mobileNavbar = document.querySelector(".mobile-navbar");
+const desktopNavbar = document.querySelector(".desktop-navbar");
 const stickyDesktop = desktopNavbar.offsetTop;
 const stickyMobile = mobileNavbar.offsetTop;
 
@@ -17,10 +17,10 @@ function stickyNav() {
         desktopNavbar.classList.add("sticky");
         mobileNavbar.classList.add("sticky");
     }
-    // else {
-    //     desktopNavbar.classList.remove("sticky");
-    //     mobileNavbar.classList.remove("sticky");
-    // }
+    else {
+        desktopNavbar.classList.remove("sticky");
+        mobileNavbar.classList.remove("sticky");
+    }
 }
 
 
@@ -29,7 +29,7 @@ document.addEventListener('click', e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]")
     if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
 
-    let currentDropdown
+    let currentDropdown;
     if (isDropdownButton) {
         currentDropdown = e.target.closest('[data-dropdown]')
         currentDropdown.classList.toggle('active')

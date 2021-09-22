@@ -61,10 +61,26 @@ html {
     transition: .2s ease;
 }
 
+#website-name {
+    margin-right: 1.5em;
+    margin-left: .75em;
+    font-family: 'Sorts Mill Goudy', Arial, Helvetica, sans-serif;
+}
 
+#loginButton {
+    padding: 10px 45px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    background-color: #1968c9;
+    color: #fff;
+}
 
-
-
+#loginButton:hover {
+    background-color: #02bedf;
+    transition: ease 0.25s;
+    transform: scale(1.025);
+}
 
 
 
@@ -94,7 +110,7 @@ html {
 }
 .fa-chevron-down,
 .fa-chevron-up {
-    animation: bounce 10s infinite;
+    animation: bounce 5s infinite;
 }
 
 
