@@ -112,7 +112,7 @@
 
     .link:hover {
         font-weight: 800;
-        transition: ease .1s;
+        transition: ease .3s;
     }
 
     .dropdown.active + .link,
@@ -123,6 +123,7 @@
 
     .dropdown {
         position: relative;
+        display: inline-block;
     }
 
     .dropdown-menu {
@@ -137,10 +138,9 @@
         pointer-events: none;
         transition: opacity 150ms ease, transform 150ms ease;
         transform: translateY(-10px);
-        
     }
 
-    .dropdown.active > .link + .dropdown-menu {
+    .dropdown > .link:hover + .dropdown-menu {
         opacity: 1;
         transform: translateY(0px);
         pointer-events: auto;

@@ -80,8 +80,12 @@ html {
     background-color: #02bedf;
     transition: ease 0.25s;
     transform: scale(1.025);
+    
 }
 
+.main-carousel {
+    
+}
 
 
 
@@ -119,13 +123,25 @@ html {
 /* ------------------------------------------------------------------------------------------ */
 
 .carousel-cell {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    margin-right: 10px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    font-size: 80px;
+    line-height: 400px;
+}
+
+.carousel-cell img {
+    background-image: url("img/change.jpeg");
 }
 
 .homeSection1 .carousel-cell {
-    background-color: #02cd82;
+    background-color: #00a526;
 }
 
 .homeSection2 .carousel-cell {
