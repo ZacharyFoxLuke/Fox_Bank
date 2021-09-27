@@ -28,7 +28,7 @@ html {
     padding-top: 60px;
 }
 
-.scrollDown {
+/* .scrollDown {
     position: absolute;
     top: 93%;
     left: 50%;
@@ -37,7 +37,7 @@ html {
 
 }
 
-.scrollDown a {
+ .scrollDown a {
     text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ html {
 
 .scrollDown:hover {
     transition: .2s ease;
-}
+} */
 
 #website-name {
     margin-right: 1.5em;
@@ -92,7 +92,7 @@ html {
 /* ---------------------------------------- ANIMATIONS ---------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
 
-@keyframes bounce {
+/* @keyframes bounce {
     0% {
         transform: translateY(0);
     }
@@ -115,7 +115,7 @@ html {
 .fa-chevron-down,
 .fa-chevron-up {
     animation: bounce 5s infinite;
-}
+} */
 
 
 
@@ -142,12 +142,4 @@ html {
 
 .homeSection1 .carousel-cell {
     background-color: #00a526;
-}
-
-.homeSection2 .carousel-cell {
-    background-color: #cd4902;
-}
-
-.homeSection3 .carousel-cell {
-    background-color: #0249cd;
 }
