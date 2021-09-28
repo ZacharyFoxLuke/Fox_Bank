@@ -1,7 +1,11 @@
 /* ---------------------------------------- UNIVERSAL STYLES ---------------------------------------- */
 /* -------------------------------------------------------------------------------------------------- */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+video {
+    object-fit:fill;
 }
 
 a {
@@ -140,6 +144,21 @@ html {
     background-image: url("img/change.jpeg");
 }
 
-.homeSection1 .carousel-cell {
-    background-color: #00a526;
+/* .carousel-cell #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
+
+.carousel-cell .flickityOverlay {
+    position: fixed;
+    z-index: 2;
+    bottom: 60%;
+    right: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 40%;
+    padding: 20px;
+} */

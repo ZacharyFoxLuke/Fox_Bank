@@ -1,7 +1,7 @@
 // ---------------------------------------- UNIVERSAL ---------------------------------------- //
 // ------------------------------------------------------------------------------------------- //
 
-
+ 
 // ---------------------------------------- GLOBAL VARIABLES
 const mobileNavbar = document.querySelector(".mobile-navbar");
 const desktopNavbar = document.querySelector(".desktop-navbar");
